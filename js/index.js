@@ -27,9 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const fraseElement = document.querySelector('.frase');
     const h2Element = fraseElement.querySelector('h2');
-    h2Element.innerHTML = ''; // Limpa o conteúdo original do h2
+    h2Element.innerHTML = '';
 
-    const textoOriginal = "Bom dia, pegue o seu cafe e bons estudos!";
+    const textoOriginal = " Bem-vindo, pegue o seu cafe e bons estudos!";
     let index = 0;
 
     const typeText = () => {
@@ -42,6 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     typeText();
+
+    
 });
+
 
 

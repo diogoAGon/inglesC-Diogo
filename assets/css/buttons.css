@@ -8,10 +8,10 @@
 }
 
 .container button {
-    padding: 35px;
+    padding: 25px;
     border: solid 0;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
     opacity: 0;
     

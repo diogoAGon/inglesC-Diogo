@@ -1,0 +1,175 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+        background-color: var(--branco-elt); 
+}
+
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+   
+    
+    
+}
+
+
+.caixa-1 {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 70px; 
+    border-radius: 50px;
+    background-image: url(../img/thumbnails/ELT-1.jpg);
+    background-size: cover;
+    border: none;
+    transition: 0.5s;
+    
+    
+
+}
+.caixa-1:hover{
+    transform: scale(1.1);
+}
+
+.caixa-1:hover .descricao-1 {
+    opacity: 1;
+    
+}
+.descricao-1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px; 
+    color: #fff; 
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    font-size: 8px;
+    
+   
+}
+.descricao-1 a {
+    text-decoration: none;
+    color: white;
+}
+.descricao-1 h2 {
+    margin-top: 10px;
+}
+.descricao-1 img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+
+   
+}
+
+
+
+
+.caixa-2 {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 70px; 
+    border-radius: 50px;
+    background-image: url(../img/thumbnails/ELT-2.jpg);
+    background-size: cover;
+    border: none;
+    transition: 0.5s;
+}
+.caixa-2:hover{
+    transform: scale(1.1);
+}
+.caixa-2:hover .descricao-2 {
+    opacity: 1;
+}
+.descricao-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px; 
+    color: #fff; 
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    font-size: 8px;
+   
+}
+.descricao-2 a {
+    text-decoration: none;
+    color: white;
+}
+.descricao-2 h2 {
+    margin-top: 10px;
+}
+.descricao-2 img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+
+   
+}
+
+
+
+
+
+
+
+.caixa-3 {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 70px; 
+    border-radius: 50px;
+    background-image: url(../img/thumbnails/ELT-3.jpg);
+    background-size: cover;
+    border: none;
+    transition: 0.5s;
+}
+.caixa-3:hover{
+    transform: scale(1.1);
+}
+.caixa-3:hover .descricao-3 {
+    opacity: 1;
+}
+.descricao-3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px; 
+    color: #fff; 
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    font-size: 8px;
+}
+.descricao-3 a {
+    text-decoration: none;
+    color: white;
+}
+.descricao-3 h2 {
+    margin-top: 10px;
+}
+.descricao-3 img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+
+   
+}
+
+
+
+
+
+
+
+
+
+
+

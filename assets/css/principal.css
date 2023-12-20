@@ -2,11 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans:ital@1&family=Nunito+Sans:opsz@6..12&family=Roboto:wght@700&display=swap');
 
 :root {
+    --branco-elt: #fffef8;
     --branco: #eef6fc;
     --azul: #0099ff;
     --azul-claro: #6DB9EF;
     --amarelo: #ffd700;
     --amarelo-claro: #F3F2A0;
+    --amarelo-mid: #F3F188;
+    --amarelo-last: #CAC70A;
 
 
 }
@@ -20,7 +23,7 @@
 }
 
 
-body {
+body .inicial{
     background-color: var(--branco);
 }
 
@@ -34,20 +37,20 @@ body {
 
 .logo{
     
-    width: 280px;
-    height: 230px;
+    width: 220px;
+    height: 180px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
 .frase {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
     
 }
 
