@@ -1,13 +1,14 @@
 
 
-.container{
+.container1{
     display: flex;
     justify-content: space-evenly;
     margin-top: 170px;
    
+   
 }
 
-.container button {
+.container1 button {
     padding: 25px;
     border: solid 0;
     border-radius: 10px;
@@ -32,3 +33,4 @@
     transition: ease 1s;
     background-color: var(--azul-claro);
 }
+

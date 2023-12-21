@@ -20,6 +20,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Inconsolata', monospace;
+    background-attachment: fixed;
 }
 
 
@@ -32,7 +33,16 @@ body .inicial{
     position: absolute;
     bottom: 0;
     z-index: -1;
+   
 }
+.waves-y { 
+    transform: scaleY(-1);
+    position: absolute;
+    z-index: -1;
+    
+ 
+}
+
 
 
 .logo{
