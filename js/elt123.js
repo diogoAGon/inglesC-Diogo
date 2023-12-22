@@ -46,15 +46,41 @@ function loadTranslation() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const btnTradutor = document.querySelector(".btnTradutor");
-    const container = document.querySelector(".container");
+  const btnTradutor = document.querySelector(".btnTradutor");
+  const container = document.querySelector(".container");
 
-    btnTradutor.addEventListener("click", function () {
-    
+  // Inicializa o estado do contêiner
+  container.style.display = "none";
+
+  btnTradutor.addEventListener("click", function () {
       container.style.display = container.style.display === "none" ? "block" : "none";
-    });
   });
-  
+});
 
 
-  
+const textarea = document.querySelector("textarea");
+textarea.addEventListener("keyup", e => {
+  textarea.style.height = "63px";
+  let scHeight = e.target.scrollHeight;
+  textarea.style.height = `${scHeight}px`;
+
+})
+document.addEventListener("DOMContentLoaded", function () {
+  let isClicked = false;
+
+
+  function toggleColor() {
+      const tradutorBtn = document.getElementById("tradutorBtn");
+      isClicked = !isClicked; 
+
+     
+      if (isClicked) {
+          tradutorBtn.classList.add("clicked");
+      } else {
+          tradutorBtn.classList.remove("clicked");
+      }
+  }
+
+
+  document.getElementById("tradutorBtn").addEventListener("click", toggleColor);
+});
