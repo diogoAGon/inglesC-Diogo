@@ -1,116 +1,97 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background-attachment: fixed;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-attachment: fixed;
 }
-
 
 .caixa-principal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
-    margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80px;
 }
-
-
 
 .video iframe {
-    margin-bottom: 20px; 
-    width: 650px;
-    height: 400px;
+  margin-bottom: 20px;
+  width: 650px;
+  height: 400px;
 }
-
 
 .container {
-    position: absolute;
-    right: 5%;
-    top: 11.5%; 
-    width: 450px; 
-    z-index: 999; 
-    display: none;
-
+  position: absolute;
+  right: 5%;
+  top: 11.5%;
+  width: 450px;
+  z-index: 999;
+  display: none;
 }
-
-
 
 .content {
-    padding: 15px;
-    box-shadow: 1px 3px 3px #0003;
-    background-color: #faf9f2;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    
-  }
-  
-  .divSelects {
-    display: flex;
-    gap: 5px;
-  }
-  
-  select {
-    
-    width: 50%;
-    padding: 10px;
-    cursor: pointer;
-    outline: none;
-    font-size: 18px;
-    border-color: #ddd;
-    border-radius: 5px;
-  }
-  
-  .divTextareas {
-    display: flex;
-    gap: 5px;
-    border-radius: 5px;
-  }
-  
-  
+  padding: 15px;
+  box-shadow: 1px 3px 3px #0003;
+  background-color: #faf9f2;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 
-  .textareaTo, .textareaFrom {
-   
-    border-color: #ddd;
-    outline: none;
-    padding: 5px;
-    font-size: 18px;
-    width: 50%;
-    border-radius: 5px;
-    resize: none;
-    height: 270px;
-  }
+.divSelects {
+  display: flex;
+  gap: 5px;
+}
+
+select {
+  width: 50%;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  font-size: 18px;
+  border-color: #ddd;
+  border-radius: 5px;
+}
+
+.divTextareas {
+  display: flex;
+  gap: 5px;
+  border-radius: 5px;
+}
+
+.textareaTo,
+.textareaFrom {
+  border-color: #ddd;
+  outline: none;
+  padding: 5px;
+  font-size: 18px;
+  width: 50%;
+  border-radius: 5px;
+  resize: none;
+  height: 270px;
+}
 
 .btnTradutor {
-    margin-bottom: 20px;
-    margin-top: 60px;
-    border: none;
-    padding: 20px;
-    border-radius: 15px;
-    background-color: var(--branco-elt);
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;  
-    font-size: 16px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  border: none;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: var(--branco-elt);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  font-size: 16px;
 }
-.btnTradutor:hover{
+
+.btnTradutor:hover {
   background-color: rgb(241, 240, 221);
 }
+
 .btnTradutor.clicked {
-  background-color: rgb(212, 211, 191); 
+  background-color: rgb(212, 211, 191);
   color: black;
   transition: 0.5s;
   font-size: 16.5px;
 }
-
-
-
-
-
-
-
-
-
-
 
 .btnTranslate {
   border: none;
@@ -118,26 +99,25 @@
   padding: 2px;
   font-weight: 200;
 }
-.btnTranslate:hover{
-  background-color: var(--amarelo-last);
-  
-}
 
+.btnTranslate:hover {
+  background-color: var(--amarelo-last);
+}
 
 .wrapper {
   background: var(--branco-elt);
   width: 470px;
   border-radius: 5px;
-  padding:  25px 25px 30px;
-
+  padding: 25px 25px 30px;
 }
+
 .wrapper h2 {
   text-align: center;
   font-size: 28px;
   color: purple;
-
 }
-.wrapper textarea{
+
+.wrapper textarea {
   width: 100%;
   height: 64px;
   padding: 15px;
@@ -146,12 +126,11 @@
   resize: none;
   font-size: 16px;
   border-color: var(--amarelo-last);
- 
   max-height: 330px;
-
-  
 }
-textarea :is(:focus, :valid){
+
+textarea:focus,
+textarea:valid {
   border-color: blue;
   border-width: 2px;
   padding: 14px;
