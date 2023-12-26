@@ -1,0 +1,226 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--branco);
+}
+.box{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+   
+
+@keyframes box-animado{
+0%{
+    background-position-x: 0%;
+}
+100%{
+    background-position-x: 100%;
+}
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+img{
+width: 300px;
+height: 300px;
+}
+
+.descricao{
+    width: 300px;
+}
+h2{
+    margin-bottom: 5px;
+}
+.duracao{
+    width: 300px;
+    margin-top: 25px;
+    
+}
+.barra{
+    width: 300px;
+    height: 6px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    display: flex;  
+    align-items: center;
+    /* comando p empurrar p esquerda */
+    justify-content: flex-start;
+   
+    
+}
+
+/* player vai funcionar de acordo com isso daqui */
+progress{
+    height: 6px;
+    width: 0%;
+    background: rgb(30,75,107);
+background: linear-gradient(207deg, rgba(30,75,107,1) 14%, rgba(0,153,255,1) 70%, rgba(109,185,239,1) 100%);
+    
+}
+.barra progress::-webkit-progress-bar {
+    background: rgb(30,75,107);
+background: linear-gradient(207deg, rgba(30,75,107,1) 14%, rgba(0,153,255,1) 70%, rgba(109,185,239,1) 100%);
+}
+
+/* Estilizando a barra de progresso para Firefox */
+.barra progress::-moz-progress-bar {
+    background: rgb(30,75,107);
+    background: linear-gradient(207deg, rgba(30,75,107,1) 14%, rgba(0,153,255,1) 70%, rgba(109,185,239,1) 100%);
+}
+
+
+
+/* fazendo um quadrado transformando em circulo, q vai ser o "direcionador" */
+.ponto{
+    background-color: var(--azul-escuro);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: -10px;
+}
+
+.tempo{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+#play, #pause{
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#previous, #next{
+    font-size: 40px;
+    cursor: pointer;
+}
+#pause{
+    display: none;
+}
+.player{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    
+    
+}
+
+#retrocede5s {
+    cursor: pointer;
+    color: var(--azul-escuro);
+}
+#retrocede5s:hover{
+    color: var(--azul-lazuli);
+}
+#avanca5s {
+    cursor: pointer;
+    color: var(--azul-escuro);
+}
+#avanca5s:hover{
+    color: var(--azul-lazuli);
+}
+
+
+
+.container {
+    position: absolute;
+    right: 5%;
+    top: 11.5%;
+    width: 450px;
+    z-index: 999;
+    display: none;
+  }
+  
+  .content {
+    padding: 15px;
+    box-shadow: 1px 3px 3px #0003;
+    background-color: #e2eef7;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .divSelects {
+    display: flex;
+    gap: 5px;
+  }
+  
+  select {
+    width: 50%;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    border-color: #ddd;
+    border-radius: 5px;
+  }
+  
+  .divTextareas {
+    display: flex;
+    gap: 5px;
+    border-radius: 5px;
+  }
+  
+  .textareaTo,
+  .textareaFrom {
+    border-color: #ddd;
+    outline: none;
+    padding: 5px;
+    font-size: 18px;
+    width: 50%;
+    border-radius: 5px;
+    resize: none;
+    height: 270px;
+  }
+  
+  .btnTradutor {
+    position: absolute;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--branco);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    font-size: 16px;
+  }
+  
+  .btnTradutor:hover {
+    background-color: #D3E7F5;
+  }
+  
+  .btnTradutor.clicked {
+    background-color: #ACC3D3;
+    color: black;
+    transition: 0.5s;
+    font-size: 16.5px;
+  }
+  
+  .btnTranslate {
+    border: none;
+    background-color: var(--azul-claro);
+    padding: 2px;
+    font-weight: 200;
+  }
+  
+  .btnTranslate:hover {
+    transition: 0.5s;
+    background-color: var(--azul);
+  }
