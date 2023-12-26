@@ -131,7 +131,7 @@ select {
 
 textarea:focus,
 textarea:valid {
-  border-color: blue;
+  
   border-width: 2px;
   padding: 14px;
 }

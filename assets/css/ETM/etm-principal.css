@@ -191,12 +191,12 @@ background: linear-gradient(207deg, rgba(30,75,107,1) 14%, rgba(0,153,255,1) 70%
   
   .btnTradutor {
     position: absolute;
-    top: 73%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: none;
-    padding: 20px;
-    border-radius: 15px;
+    padding: 18px;
+    border-radius: 12px;
     background-color: var(--branco);
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
     font-size: 16px;
@@ -223,4 +223,40 @@ background: linear-gradient(207deg, rgba(30,75,107,1) 14%, rgba(0,153,255,1) 70%
   .btnTranslate:hover {
     transition: 0.5s;
     background-color: var(--azul);
+  }
+
+  
+  .wrapper {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .wrapper h2 {
+    text-align: center;
+    font-size: 28px;
+    color: purple;
+  }
+  
+  .wrapper textarea {
+    width: 350px;
+    height: 64px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    border-color: var(--azul);
+    max-height: 150px;
+  }
+  
+  textarea:focus,
+  textarea:valid {
+    border-width: 2px;
+    padding: 10px;
+  }
+  
+  textarea::-webkit-scrollbar {
+    width: 0px;
   }

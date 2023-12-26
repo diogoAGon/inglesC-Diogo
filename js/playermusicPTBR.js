@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     let musicas = [
-        {titulo:'Lonely', Artista:'Akon', src:'/assets/musicas/Akon - Lonely (Official Music Video)_6EEW-9NDM5k.mp3', img:'/assets/img/thumb-msc/LONELY-pic.jpg'},
-        {titulo:'Better Now', Artista:'Post Malone', src:'/assets/musicas/better now.mp3', img:'/assets/img/thumb-msc/betternow-pic.jpg'},
-        {titulo:'White Iverson', Artista:'Post Malone', src:'/assets/musicas/Post Malone - White Iverson_SLsTskih7_I.mp3', img:'/assets/img/thumb-msc/Congratulations-PIC.jpg'}
+        {titulo:'Céu Azul', Artista:'Charlie Brown Jr', src:'/assets/musicas/Charlie.mp3', img:'/assets/img/thumb-msc/CeuAzul.jpg'},
+        {titulo:'Chove Chuva', Artista:'Jorge Ben Jor', src:'/assets/musicas/ChoveChuva.mp3', img:'/assets/img/thumb-msc/ChoveChuva.jpg'},
+        {titulo:'Deixe me ir', Artista:'1Kilo', src:'/assets/musicas/DeixeMeIr.mp3', img:'/assets/img/thumb-msc/Deixe-Me-Ir.jpg'}
     ];
 
     let musica = document.querySelector('audio');
@@ -164,6 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
 document.addEventListener("DOMContentLoaded", function () {
   let isClicked = false;
 
@@ -184,8 +185,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("tradutorBtn").addEventListener("click", toggleColor);
 });
 
-
-
 const textarea = document.querySelector(".resize");
 textarea.addEventListener("keyup", e => {
   textarea.style.height = "63px";
@@ -193,6 +192,4 @@ textarea.addEventListener("keyup", e => {
   textarea.style.height = `${scHeight}px`;
 
 })
-
-
 
