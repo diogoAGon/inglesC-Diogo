@@ -1,0 +1,36 @@
+*{
+    text-decoration: none;
+}
+
+.caixa{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 15%;
+   
+
+  }
+
+ .bloco-1, .bloco-2 { 
+  background-color: var(--branco-azul);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  cursor: pointer;
+  
+ }
+
+
+
+ img{
+  width: 120px;
+  height: 150px;
+ }
+
+ h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+ }
