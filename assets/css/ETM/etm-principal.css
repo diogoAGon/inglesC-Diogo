@@ -257,5 +257,40 @@ background: linear-gradient(207deg, rgba(30,75,107,1) 14%, rgba(0,153,255,1) 70%
     width: 0px;
   }
 
+  @media only screen and (max-width: 1800px){
+
+    .container {
+      position: absolute;
+      right: 5%;
+      top: 11.5%;
+      width: 350px;
+      z-index: 999;
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 1800px){
+  
+    .container {
+      position: absolute;
+      right: 5%;
+      top: 11.5%;
+      width: 350px;
+      z-index: 999;
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 1400px){
+  
+    .container {
+      position: absolute;
+      right: 5%;
+      top: 11.5%;
+      width: 330px;
+      z-index: 999;
+      display: none;
+      
+    }
+  }
+
 
  

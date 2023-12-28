@@ -140,3 +140,37 @@ textarea:valid {
 textarea::-webkit-scrollbar {
   width: 0px;
 }
+@media only screen and (max-width: 1800px){
+
+  .container {
+    position: absolute;
+    right: 5%;
+    top: 11.5%;
+    width: 300px;
+    z-index: 999;
+    display: none;
+  }
+}
+@media only screen and (max-width: 1800px){
+
+  .container {
+    position: absolute;
+    right: 5%;
+    top: 11.5%;
+    width: 300px;
+    z-index: 999;
+    display: none;
+  }
+}
+@media only screen and (max-width: 1400px){
+
+  .container {
+    position: absolute;
+    right: 1%;
+    top: 11.5%;
+    width: 300px;
+    z-index: 999;
+    display: none;
+    
+  }
+}
