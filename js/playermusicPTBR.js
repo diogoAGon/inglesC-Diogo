@@ -1,101 +1,101 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let musicas = [
-        {titulo:'Céu Azul', Artista:'Charlie Brown Jr', src:'/assets/musicas/Charlie.mp3', img:'/assets/img/thumb-msc/CeuAzul.jpg'},
-        {titulo:'Chove Chuva', Artista:'Jorge Ben Jor', src:'/assets/musicas/ChoveChuva.mp3', img:'/assets/img/thumb-msc/ChoveChuva.jpg'},
-        {titulo:'Deixe me ir', Artista:'1Kilo', src:'/assets/musicas/DeixeMeIr.mp3', img:'/assets/img/thumb-msc/Deixe-Me-Ir.jpg'}
-    ];
+  let musicas = [
+    { titulo: 'Céu Azul', Artista: 'Charlie Brown Jr', src: '/assets/musicas/Charlie.mp3', img: '/assets/img/thumb-msc/CeuAzul.jpg' },
+    { titulo: 'Chove Chuva', Artista: 'Jorge Ben Jor', src: '/assets/musicas/ChoveChuva.mp3', img: '/assets/img/thumb-msc/ChoveChuva.jpg' },
+    { titulo: 'Deixe me ir', Artista: '1Kilo', src: '/assets/musicas/DeixeMeIr.mp3', img: '/assets/img/thumb-msc/Deixe-Me-Ir.jpg' }
+  ];
 
-    let musica = document.querySelector('audio');
-    let playM = document.querySelector('#play');
-    let pauseM = document.querySelector('#pause');
-    let barra = document.querySelector('progress');
-    let tempoDecorrido = document.querySelector('.inicio');
-    let duracaoMusica = document.querySelector('.fim');
-    let imagem = document.querySelector('img');
-    let nomeMusica = document.querySelector('.descricao h2');
-    let nomeArtista = document.querySelector('.descricao i');
-    let anterior = document.querySelector('#previous');
-    let proximo = document.querySelector('#next');
-    let indexMusica = 0;
+  let musica = document.querySelector('audio');
+  let playM = document.querySelector('#play');
+  let pauseM = document.querySelector('#pause');
+  let barra = document.querySelector('progress');
+  let tempoDecorrido = document.querySelector('.inicio');
+  let duracaoMusica = document.querySelector('.fim');
+  let imagem = document.querySelector('img');
+  let nomeMusica = document.querySelector('.descricao h2');
+  let nomeArtista = document.querySelector('.descricao i');
+  let anterior = document.querySelector('#previous');
+  let proximo = document.querySelector('#next');
+  let indexMusica = 0;
 
+  renderizarMusica(indexMusica);
+
+  duracaoMusica.textContent = segundosParaMinutos(Math.floor(musica.duration));
+
+  anterior.addEventListener('click', () => {
+    indexMusica--;
+    if (indexMusica < 0) {
+      indexMusica = musicas.length - 1;
+    }
     renderizarMusica(indexMusica);
+    pausarMusica(indexMusica);
+  });
 
-    duracaoMusica.textContent = segundosParaMinutos(Math.floor(musica.duration));
+  proximo.addEventListener('click', () => {
+    indexMusica++;
+    if (indexMusica >= musicas.length) {
+      indexMusica = 0;
+    }
+    renderizarMusica(indexMusica);
+    pausarMusica(indexMusica);
+  });
 
-    anterior.addEventListener('click', () => {
-        indexMusica--;
-        if (indexMusica < 0) {
-            indexMusica = musicas.length - 1;
-        }
-        renderizarMusica(indexMusica);
-        pausarMusica(indexMusica);
+  musica.addEventListener('timeupdate', atualizarBarra);
+  playM.addEventListener('click', tocarMusica);
+  pauseM.addEventListener('click', pausarMusica);
+
+  function renderizarMusica(index) {
+    musica.setAttribute('src', musicas[index].src);
+    musica.addEventListener('loadeddata', () => {
+      nomeMusica.textContent = musicas[index].titulo;
+      nomeArtista.textContent = musicas[index].Artista;
+      imagem.src = musicas[index].img;
+
+      duracaoMusica.textContent = segundosParaMinutos(Math.floor(musica.duration));
     });
+  }
 
-    proximo.addEventListener('click', () => {
-        indexMusica++;
-        if (indexMusica >= musicas.length) {
-            indexMusica = 0;
-        }
-        renderizarMusica(indexMusica);
-        pausarMusica(indexMusica);
-    });
+  function tocarMusica() {
+    musica.play();
+    pauseM.style.display = 'block';
+    playM.style.display = 'none';
+  }
 
-    musica.addEventListener('timeupdate', atualizarBarra);
-    playM.addEventListener('click', tocarMusica);
-    pauseM.addEventListener('click', pausarMusica);
+  function pausarMusica() {
+    musica.pause();
+    pauseM.style.display = 'none';
+    playM.style.display = 'block';
+  }
 
-    function renderizarMusica(index) {
-        musica.setAttribute('src', musicas[index].src);
-        musica.addEventListener('loadeddata', () => {
-            nomeMusica.textContent = musicas[index].titulo;
-            nomeArtista.textContent = musicas[index].Artista;
-            imagem.src = musicas[index].img;
+  function atualizarBarra() {
+    barra.style.width = Math.floor((musica.currentTime / musica.duration) * 100) + '%';
+    tempoDecorrido.textContent = segundosParaMinutos(Math.floor(musica.currentTime));
+  }
 
-            duracaoMusica.textContent = segundosParaMinutos(Math.floor(musica.duration));
-        });
+  function segundosParaMinutos(segundos) {
+    let campoMinutos = Math.floor(segundos / 60);
+    let campoSegundos = segundos % 60;
+    if (campoSegundos < 10) {
+      campoSegundos = '0' + campoSegundos;
     }
-
-    function tocarMusica() {
-        musica.play();
-        pauseM.style.display = 'block';
-        playM.style.display = 'none';
-    }
-
-    function pausarMusica() {
-        musica.pause();
-        pauseM.style.display = 'none';
-        playM.style.display = 'block';
-    }
-
-    function atualizarBarra() {
-        barra.style.width = Math.floor((musica.currentTime / musica.duration) * 100) + '%';
-        tempoDecorrido.textContent = segundosParaMinutos(Math.floor(musica.currentTime));
-    }
-
-    function segundosParaMinutos(segundos) {
-        let campoMinutos = Math.floor(segundos / 60);
-        let campoSegundos = segundos % 60;
-        if (campoSegundos < 10) {
-            campoSegundos = '0' + campoSegundos;
-        }
-        return campoMinutos + ':' + campoSegundos;
-    }
-    document.querySelector('#avanca5s').addEventListener('click', avancar5s);
+    return campoMinutos + ':' + campoSegundos;
+  }
+  document.querySelector('#avanca5s').addEventListener('click', avancar5s);
 
 
-document.querySelector('#retrocede5s').addEventListener('click', retroceder5s);
+  document.querySelector('#retrocede5s').addEventListener('click', retroceder5s);
 
 
 
-function avancar5s() {
-    
+  function avancar5s() {
+
     musica.currentTime += 5;
-}
+  }
 
-function retroceder5s() {
-   
+  function retroceder5s() {
+
     musica.currentTime -= 5;
-}
+  }
 });
 
 
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
   container.style.display = "none";
 
   btnTradutor.addEventListener("click", function () {
-      container.style.display = container.style.display === "none" ? "block" : "none";
+    container.style.display = container.style.display === "none" ? "block" : "none";
   });
 });
 
@@ -170,15 +170,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   function toggleColor() {
-      const tradutorBtn = document.getElementById("tradutorBtn");
-      isClicked = !isClicked; 
+    const tradutorBtn = document.getElementById("tradutorBtn");
+    isClicked = !isClicked;
 
-     
-      if (isClicked) {
-          tradutorBtn.classList.add("clicked");
-      } else {
-          tradutorBtn.classList.remove("clicked");
-      }
+
+    if (isClicked) {
+      tradutorBtn.classList.add("clicked");
+    } else {
+      tradutorBtn.classList.remove("clicked");
+    }
   }
 
 

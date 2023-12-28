@@ -105,7 +105,7 @@ select {
 }
 
 .wrapper {
-  background: var(--branco-elt);
+ 
   width: 470px;
   border-radius: 5px;
   padding: 25px 25px 30px;
@@ -131,7 +131,7 @@ select {
 
 textarea:focus,
 textarea:valid {
-  
+
   border-width: 2px;
   padding: 14px;
 }

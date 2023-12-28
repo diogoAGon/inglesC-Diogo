@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
   container.style.display = "none";
 
   btnTradutor.addEventListener("click", function () {
-      container.style.display = container.style.display === "none" ? "block" : "none";
+    container.style.display = container.style.display === "none" ? "block" : "none";
   });
 });
 
@@ -70,15 +70,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   function toggleColor() {
-      const tradutorBtn = document.getElementById("tradutorBtn");
-      isClicked = !isClicked; 
+    const tradutorBtn = document.getElementById("tradutorBtn");
+    isClicked = !isClicked;
 
-     
-      if (isClicked) {
-          tradutorBtn.classList.add("clicked");
-      } else {
-          tradutorBtn.classList.remove("clicked");
-      }
+
+    if (isClicked) {
+      tradutorBtn.classList.add("clicked");
+    } else {
+      tradutorBtn.classList.remove("clicked");
+    }
   }
 
 

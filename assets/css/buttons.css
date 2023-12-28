@@ -1,11 +1,9 @@
-
-
-.container1{
+.container1 {
     display: flex;
     justify-content: space-evenly;
     margin-top: 170px;
-   
-   
+
+
 }
 
 .container1 button {
@@ -15,8 +13,8 @@
     font-size: 16px;
     cursor: pointer;
     opacity: 0;
-    
-    
+
+
 }
 
 .ELT {
@@ -33,4 +31,3 @@
     transition: ease 1s;
     background-color: var(--azul-claro);
 }
-

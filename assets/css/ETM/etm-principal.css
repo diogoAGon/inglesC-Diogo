@@ -2,11 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+   background-color: var(--branco);
 }
 
-body{
-    background-color: var(--branco);
-}
+
+
 .box{
     position: absolute;
     top: 35%;
@@ -16,14 +16,8 @@ body{
 }
    
 
-@keyframes box-animado{
-0%{
-    background-position-x: 0%;
-}
-100%{
-    background-position-x: 100%;
-}
-}
+
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -85,8 +79,8 @@ background: linear-gradient(207deg, rgba(30,75,107,1) 14%, rgba(0,153,255,1) 70%
 /* fazendo um quadrado transformando em circulo, q vai ser o "direcionador" */
 .ponto{
     background-color: var(--azul-escuro);
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     margin-left: -10px;
 }
@@ -227,10 +221,12 @@ background: linear-gradient(207deg, rgba(30,75,107,1) 14%, rgba(0,153,255,1) 70%
 
   
   .wrapper {
+    background: none;
     position: absolute;
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
   }
   
   .wrapper h2 {

@@ -1,85 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="/assets/css/principal.css">
-        <link rel="stylesheet" href="/assets/css/ETM/etm-principal.css">
-       
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musica PT-BR</title>
+    <link rel="stylesheet" href="/assets/css/principal.css">
+    <link rel="stylesheet" href="/assets/css/ETM/etm-principal.css">
+    <link rel="icon" href="/assets/img/ICD-LOGO.png" type="image">
+    <link rel="shortcut icon" href="/assets/img/ICD-LOGO.png" type="image">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&family=Material+Symbols+Outlined:opsz@24&family=Material+Symbols+Outlined:FILL@0&family=Material+Symbols+Outlined:GRAD@0&family=Material+Symbols+Outlined:wght@700&family=Material+Symbols+Outlined:FILL@1&family=Material+Symbols+Outlined:GRAD@-50..200" />
+
+</head>
+
 <body>
 
-
-
-
-  
-
-
-
+   
     <div class="box">
-        <img src="/assets/img/thumb-msc/LONELY-pic.jpg" id="m-betternow">
+        
+        <img src="/assets/img/thumb-msc/CeuAzul.jpg" class="Thumb-CeuAzul">
         <div class="descricao">
             <h2>Nome da musica</h2>
             <i>Nome do artista</i>
-        </div>   
-        
+        </div>
+
         <div class="duracao">
             <div class="barra">
-            <progress value="0" max="1"></progress>
-            <div class="ponto"></div>
+                <progress value="0" max="1"></progress>
+                <div class="ponto"></div>
             </div>
             <div class="tempo">
-                    <p class="inicio">0:00</p>
-                    <p class="fim">3:00</p>
+                <p class="inicio">0:00</p>
+                <p class="fim">3:00</p>
             </div>
         </div>
         <div class="player">
-            
-           <span class="material-symbols-outlined" id="retrocede5s">skip_previous</span>
+
+            <span class="material-symbols-outlined" id="retrocede5s">skip_previous</span>
             <span class="material-symbols-outlined" id="previous">skip_previous</span>
             <span class="material-symbols-outlined" id="play">play_circle</span>
-           <span class="material-symbols-outlined" id="pause">pause_circle</span>
-           <span class="material-symbols-outlined" id="next">skip_next</span>
-           <span class="material-symbols-outlined" id="avanca5s">skip_next</span>
-           
-          
+            <span class="material-symbols-outlined" id="pause">pause_circle</span>
+            <span class="material-symbols-outlined" id="next">skip_next</span>
+            <span class="material-symbols-outlined" id="avanca5s">skip_next</span>
+
+
         </div>
         <audio src="/assets/musicas/Akon - Lonely (Official Music Video)_6EEW-9NDM5k.mp3"></audio>
-        
-        </div>
 
-        <button class="btnTradutor" id="tradutorBtn" onclick="toggleColor()">Tradutor</button>
+    </div>
 
-        <div class="container">
-            <div class="content">
-                <div class="divSelects">
-                    <select class="selectFrom"></select>
-                    <select class="selectTo"></select>
-                </div>
-                <div class="divTextareas">
-                    <textarea class="textareaFrom" rows="8" placeholder="Digitar texto"></textarea>
-                    <textarea class="textareaTo" rows="8" placeholder="Tradução" disabled></textarea>
-                </div>
-                <button class="btnTranslate">TRADUZIR</button>
-               
+    <button class="btnTradutor" id="tradutorBtn" onclick="toggleColor()">Tradutor</button>
+
+    <div class="container">
+        <div class="content">
+            <div class="divSelects">
+                <select class="selectFrom"></select>
+                <select class="selectTo"></select>
             </div>
+            <div class="divTextareas">
+                <textarea class="textareaFrom" rows="8" placeholder="Digitar texto"></textarea>
+                <textarea class="textareaTo" rows="8" placeholder="Tradução" disabled></textarea>
+            </div>
+            <button class="btnTranslate">TRADUZIR</button>
+
         </div>
+    </div>
 
 
 
-        <div class="wrapper">
-            
-            <h2></h2>
-            <textarea placeholder="Anote aqui..." required class="resize"></textarea>
-          
-        </div>
+    <div class="wrapper">
 
-        
+        <h2></h2>
+        <textarea placeholder="Anote aqui..." required class="resize"></textarea>
 
+    </div>
 
 
 
@@ -98,5 +92,6 @@
             </svg>
         </div>
         <script src="/js/playermusicPTBR.js"></script>
+        <a href="/telas/telas-etm/etm.html"><img src="/assets/svg/keyboard_return_FILL0_wght400_GRAD0_opsz24.svg" alt=""class="return"> </a>
 </body>
 </html>
